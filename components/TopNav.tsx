@@ -5,6 +5,7 @@ import {
   Heading,
   HStack,
   IconButton,
+  LinkOverlay,
   Stack,
   Text,
   useDisclosure,
@@ -34,7 +35,9 @@ function TopNav() {
         <HStack justifyContent="space-between">
           <Box>
             <HStack>
-              <Heading color={"teal"}>Automation Camp Store</Heading>
+              <LinkOverlay href={"/"}>
+                <Heading color={"teal"}>Automation Camp Store</Heading>
+              </LinkOverlay>
             </HStack>
           </Box>
           <Box>

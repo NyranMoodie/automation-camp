@@ -10,6 +10,7 @@ import {
   Image,
   Input,
   Link,
+  LinkOverlay,
   Stack,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
@@ -34,11 +35,11 @@ const Home: NextPage = () => {
 
               <Stack spacing={6}>
                 <Center>
-                  <Link href="/api/auth/login">
+                  <LinkOverlay href="/api/auth/login">
                     <Button colorScheme={"teal"} variant={"solid"}>
                       Sign In Or Register
                     </Button>
-                  </Link>
+                  </LinkOverlay>
                 </Center>
               </Stack>
             </Stack>
