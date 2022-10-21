@@ -34,11 +34,11 @@ const Home: NextPage = () => {
 
               <Stack spacing={6}>
                 <Center>
-                  <a href="/api/auth/login">
+                  <Link href="/api/auth/login">
                     <Button colorScheme={"teal"} variant={"solid"}>
                       Sign In Or Register
                     </Button>
-                  </a>
+                  </Link>
                 </Center>
               </Stack>
             </Stack>
