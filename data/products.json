@@ -1,72 +1,72 @@
 [
   {
-    "id": "cosmo-hat-model",
-    "name": "Cosmo Fitted Hat",
+    "id": "quality-hat-model",
+    "name": "Quality Fitted Hat",
     "price": 30,
     "description": "",
-    "image": "/images/cosmo-hat-model.jpg"
+    "image": "/images/quality-hat-model.jpg"
   },
   {
-    "id": "cosmo-hat",
-    "name": "Cosmo Trucker Hat",
+    "id": "quality-hat",
+    "name": "Quality Trucker Hat",
     "price": 24,
     "description": "",
-    "image": "/images/cosmo-hat.jpg"
+    "image": "/images/quality-hat.jpg"
   },
   {
-    "id": "cosmo-mousepad",
-    "name": "Cosmo Mousepad",
+    "id": "quality-mousepad",
+    "name": "Quality Mousepad",
     "price": 20,
     "description": "",
-    "image": "/images/cosmo-mousepad.jpg"
+    "image": "/images/quality-mousepad.jpg"
   },
   {
-    "id": "cosmo-mug",
-    "name": "Cosmo Mug",
+    "id": "quality-mug",
+    "name": "Quality Mug",
     "price": 15,
     "description": "",
-    "image": "/images/cosmo-mug.jpg"
+    "image": "/images/quality-mug.jpg"
   },
   {
-    "id": "cosmo-pillow",
-    "name": "Cosmo Pillow",
+    "id": "quality-pillow",
+    "name": "Quality Pillow",
     "price": 20,
     "description": "",
-    "image": "/images/cosmo-pillow.jpg"
+    "image": "/images/quality-pillow.jpg"
   },
   {
-    "id": "cosmo-sweatshirt-hooded",
-    "name": "Cosmo Hooded Sweatshirt",
+    "id": "quality-sweatshirt-hooded",
+    "name": "Quality Hooded Sweatshirt",
     "price": 50,
     "description": "",
-    "image": "/images/cosmo-sweatshirt-hooded.jpg"
+    "image": "/images/quality-sweatshirt-hooded.jpg"
   },
   {
-    "id": "cosmo-sweatshirt",
-    "name": "Cosmo Sweatshirt",
+    "id": "quality-sweatshirt",
+    "name": "Quality Sweatshirt",
     "price": 40,
     "description": "",
-    "image": "/images/cosmo-sweatshirt.jpg"
+    "image": "/images/quality-sweatshirt.jpg"
   },
   {
-    "id": "cosmo-tshirt-kids",
-    "name": "Cosmo Kids Tshirt",
+    "id": "quality-tshirt-kids",
+    "name": "Quality Kids Tshirt",
     "price": 15,
     "description": "",
-    "image": "/images/cosmo-tshirt-kids.jpg"
+    "image": "/images/quality-tshirt-kids.jpg"
   },
   {
-    "id": "cosmo-tshirt-model",
-    "name": "Cosmo Tshirt",
+    "id": "quality-tshirt-model",
+    "name": "Quality Tshirt",
     "price": 20,
     "description": "",
-    "image": "/images/cosmo-tshirt-model.jpg"
+    "image": "/images/quality-tshirt-model.jpg"
   },
   {
-    "id": "cosmo-tshirt-vneck",
-    "name": "Cosmo Vneck",
+    "id": "quality-tshirt-vneck",
+    "name": "Quality Vneck",
     "price": 20,
     "description": "",
-    "image": "/images/cosmo-tshirt-vneck.jpg"
+    "image": "/images/quality-tshirt-vneck.jpg"
   }
 ]
