@@ -56,6 +56,18 @@ function TopNav() {
                   Home
                 </Button>
               </Link>
+              <Link
+                href={"https://qualityworkscg.com/automation-bootcamp/"}
+                target={"_blank"}
+              >
+                <Button
+                  variant={"unstyled"}
+                  color={"teal"}
+                  colorScheme={"teal"}
+                >
+                  About
+                </Button>
+              </Link>
               <Link href={"/contact"}>
                 <Button
                   variant={
