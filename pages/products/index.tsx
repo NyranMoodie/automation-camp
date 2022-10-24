@@ -14,7 +14,7 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 import Head from "next/head";
-import products from "../../data/products.json";
+import { products } from "../../data/products";
 import Hero from "../../components/Hero";
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -66,7 +66,7 @@ const Home: PageWithLayout = () => {
               .map((product, index) => {
                 return (
                   <Stack key={index} borderRadius={"lg"}>
-                    <Link href={`/products/${product.id}`}>
+                    <Link href={`/products/${product.id.toString()}`}>
                       <Box position="relative">
                         <AspectRatio ratio={4 / 3}>
                           <Image

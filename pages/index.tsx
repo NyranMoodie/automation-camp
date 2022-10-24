@@ -1,22 +1,15 @@
 import {
-  Box,
   Button,
   Center,
-  Checkbox,
   Flex,
-  FormControl,
-  FormLabel,
   Heading,
   Image,
-  Input,
-  Link,
   LinkOverlay,
   Stack,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import { useState } from "react";
 import { useUser } from "@auth0/nextjs-auth0";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 const Home: NextPage = () => {
   const { user, isLoading } = useUser();
   const router = useRouter();

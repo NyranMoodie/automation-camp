@@ -15,12 +15,10 @@ import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiArrowBack } from "react-icons/bi";
 import Layout from "../../components/Layout";
-import products from "../../data/products.json";
+import { products } from "../../data/products";
 import { PageWithLayout } from "../../modules/Layout";
-const SelectedProduct: PageWithLayout = () => {
-  const router = useRouter() as any;
-  const { id } = router.query;
-  const product = products.find((element) => element?.id === id);
+import { Product } from "../../modules/product";
+const SelectedProduct: PageWithLayout = ({ product }: any) => {
   return (
     <Container maxW={"7xl"}>
       <Stack py={6} spacing={4} direction={"column"}>
@@ -63,6 +61,29 @@ const SelectedProduct: PageWithLayout = () => {
     </Container>
   );
 };
+
+export async function getStaticProps({ params }: any) {
+  const { id: productId } = params;
+  const product = products.find(({ id }) => id === productId);
+  return {
+    props: {
+      product,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: products.map(({ id }) => {
+      return {
+        params: {
+          id: id,
+        },
+      };
+    }),
+    fallback: false,
+  };
+}
 
 SelectedProduct.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
