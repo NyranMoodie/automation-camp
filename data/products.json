@@ -1,72 +1,26 @@
 [
   {
-    "id": "quality-hat-model",
-    "name": "Quality Fitted Hat",
-    "price": 30,
-    "description": "",
-    "image": "/images/quality-hat-model.jpg"
+    "id": "t-shirt",
+    "name": "T-Shirt",
+    "price": 35.0,
+    "imageUrl": "https://source.unsplash.com/WWesmHEgXDs/640x640",
+    "description": "A white t-shirt",
+    "url": "/api/products/halfmoon"
   },
   {
-    "id": "quality-hat",
-    "name": "Quality Trucker Hat",
-    "price": 24,
-    "description": "",
-    "image": "/images/quality-hat.jpg"
+    "id": "wallet",
+    "name": "Wallet",
+    "price": 20.0,
+    "imageUrl": "https://source.unsplash.com/9Huby3g9fN0/640x640",
+    "description": "A fancy wallet",
+    "url": "/api/products/wallet"
   },
   {
-    "id": "quality-mousepad",
-    "name": "Quality Mousepad",
-    "price": 20,
-    "description": "",
-    "image": "/images/quality-mousepad.jpg"
-  },
-  {
-    "id": "quality-mug",
-    "name": "Quality Mug",
-    "price": 15,
-    "description": "",
-    "image": "/images/quality-mug.jpg"
-  },
-  {
-    "id": "quality-pillow",
-    "name": "Quality Pillow",
-    "price": 20,
-    "description": "",
-    "image": "/images/quality-pillow.jpg"
-  },
-  {
-    "id": "quality-sweatshirt-hooded",
-    "name": "Quality Hooded Sweatshirt",
-    "price": 50,
-    "description": "",
-    "image": "/images/quality-sweatshirt-hooded.jpg"
-  },
-  {
-    "id": "quality-sweatshirt",
-    "name": "Quality Sweatshirt",
-    "price": 40,
-    "description": "",
-    "image": "/images/quality-sweatshirt.jpg"
-  },
-  {
-    "id": "quality-tshirt-kids",
-    "name": "Quality Kids Tshirt",
-    "price": 15,
-    "description": "",
-    "image": "/images/quality-tshirt-kids.jpg"
-  },
-  {
-    "id": "quality-tshirt-model",
-    "name": "Quality Tshirt",
-    "price": 20,
-    "description": "",
-    "image": "/images/quality-tshirt-model.jpg"
-  },
-  {
-    "id": "quality-tshirt-vneck",
-    "name": "Quality Vneck",
-    "price": 20,
-    "description": "",
-    "image": "/images/quality-tshirt-vneck.jpg"
+    "id": "cup",
+    "name": "Cup",
+    "price": 5.0,
+    "imageUrl": "https://source.unsplash.com/he_xuL-CyyI/640x640",
+    "description": "A tea cup",
+    "url": "/api/products/veiltail"
   }
 ]
