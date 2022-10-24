@@ -177,4 +177,73 @@ export const products = [
     image2:
       "https://images.pexels.com/photos/2285500/pexels-photo-2285500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
+  {
+    id: "couch-1",
+    name: "Red Couch",
+    price: 320,
+    description:
+      "ZINUS Mikhail Sofa Couch / Ruby Red Sofa / Button Tufted Cushions / Easy, Tool-Free Assembly",
+    category: "couch",
+    image:
+      "https://images.pexels.com/photos/9086927/pexels-photo-9086927.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image2:
+      "https://images.unsplash.com/photo-1560459228-5c37437f2f13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+  },
+  {
+    id: "couch-2",
+    name: "White Couch",
+    price: 234,
+    description:
+      "Jummico Convertible Sectional Sofa Couch, Sofa Set for Living Room with 4 Throw Pillows, U-Shaped Modern Minimalist Fabric Modular Sofa with Double Chaise (White)",
+    category: "couch",
+    image:
+      "https://images.unsplash.com/photo-1507138451611-3001135909fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    image2:
+      "https://images.unsplash.com/photo-1519961655809-34fa156820ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80",
+  },
+  {
+    id: "couch-3",
+    name: "Gray Couch",
+    price: 550,
+    description:
+      "Esright 88.6” Convertible Sectional Sofa Couch with Ottoman, Modern Tufted Fabric L-Shaped Couch with Reversible Chaise, Suitable for Office,Living Room and Hotel Lobby, Gray",
+    category: "couch",
+    image:
+      "https://images.unsplash.com/photo-1491926626787-62db157af940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    image2:
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+  },
+
+  {
+    id: "laptop-1",
+    name: "Mackbook Pro",
+    price: 2000,
+    description: `2022 HP 17.3" FHD IPS Laptop, 11th Gen 4-Core Intel Core i5-1135G7(Beats i7-1065G7), Iris Xe Graphics, 16GB 3200Mhz DDR4 RAM, 512GB SSD, Windows 11 S, Silver`,
+    category: "laptop",
+    image:
+      "https://images.pexels.com/photos/4260477/pexels-photo-4260477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image2:
+      "https://images.pexels.com/photos/5429128/pexels-photo-5429128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "laptop-2",
+    name: "Dell Laptop",
+    price: 1000,
+    description: `2022 Newest Dell Inspiron 15.6" FHD Touchscreen Laptop, Intel 10th Generation Core i5-1035G1(Up to 3.60GHz, Beat i7-8550U), 16GB Memory, 512GB PCIe SSD, Intel UHD Graphics, WiFi, Webcam, HDMI, Win11 S`,
+    category: "laptop",
+    image:
+      "https://images.pexels.com/photos/1266982/pexels-photo-1266982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image2:
+      "https://images.pexels.com/photos/3776438/pexels-photo-3776438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "laptop-3",
+    name: "HP Laptop",
+    price: 680,
+    description: `2022 Newest HP 14" FHD Laptop, NonTouch Display, AMD Ryzen3 3250U (up to 3.5 GHz), 8GB RAM, 256GB SSD, Ethernet, Webcam, WiFi, Bluetooth, HDMI,Type-C, Win10 Home`,
+    category: "laptop",
+    image:
+      "https://images.pexels.com/photos/9845869/pexels-photo-9845869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image2: "",
+  },
 ];
