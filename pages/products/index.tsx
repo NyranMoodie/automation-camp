@@ -15,6 +15,11 @@ import {
   Select,
   HStack,
   Tag,
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { products } from "../../data/products";
@@ -26,7 +31,8 @@ import Layout from "../../components/Layout";
 import { PageWithLayout } from "../../modules/Layout";
 const Home: PageWithLayout = () => {
   const [searchValue, setSearchValue] = useState("");
-
+  const [count, setCount] = useState({ id: "", quantity: 1 });
+  
   return (
     <Box mt={-20}>
       <Head>
@@ -92,6 +98,15 @@ const Home: PageWithLayout = () => {
                         <AspectRatio ratio={4 / 3}>
                           <Image
                             src={product.image}
+                            _hover={{ opacity: 0.8, transition: "1.3s" }}
+                            onMouseOver={(e): void => {
+                              product.image2 &&
+                                (e.currentTarget.src = product.image2);
+                            }}
+                            onMouseOut={(e): void => {
+                              product.image2 &&
+                                (e.currentTarget.src = product.image || "");
+                            }}
                             draggable="false"
                             fallback={<Skeleton />}
                             borderRadius={"xl"}
@@ -105,7 +120,23 @@ const Home: PageWithLayout = () => {
                         <Text fontWeight="medium" color={"gray.400"}>
                           {product.name}
                         </Text>
-                        <HStack>
+                        <NumberInput
+                          w={"70px"}
+                          defaultValue={1}
+                          size="xs"
+                          min={1}
+                          max={20}
+                          onChange={(e, value) => {
+                            setCount({ id: product.id, quantity: value });
+                          }}
+                        >
+                          <NumberInputField />
+                          <NumberInputStepper>
+                            <NumberIncrementStepper />
+                            <NumberDecrementStepper />
+                          </NumberInputStepper>
+                        </NumberInput>
+                        <HStack pt={"1"}>
                           <Text>${product.price}</Text>
                           <Tag variant={"outline"} colorScheme={"teal"}>
                             {product.category}
@@ -123,6 +154,9 @@ const Home: PageWithLayout = () => {
                       data-item-url={`/products/${product?.id}`}
                       data-item-image={product?.image}
                       data-item-name={product?.name}
+                      data-item-quantity={
+                        product?.id === count.id ? count.quantity : 1
+                      }
                       leftIcon={<AiOutlineShoppingCart />}
                       colorScheme={"teal"}
                     >
