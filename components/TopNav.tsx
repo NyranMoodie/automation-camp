@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Center,
   Divider,
   Heading,
   HStack,
@@ -34,7 +35,7 @@ function TopNav() {
     <Box>
       <Box p={3} px={["", 24]} w="100%" shadow="base" bg={"white"}>
         <HStack justifyContent="space-between">
-          <Box>
+          <Box id="logo">
             <HStack>
               <Image src="/favicon.ico"></Image>
               <a href={"/"}>
@@ -49,6 +50,7 @@ function TopNav() {
             >
               <Link href={"/products"}>
                 <Button
+                  id="top-home"
                   variant={
                     router.pathname === "/products" ? "solid" : "unstyled"
                   }
@@ -64,6 +66,7 @@ function TopNav() {
                 target={"_blank"}
               >
                 <Button
+                  id="top-about"
                   variant={"unstyled"}
                   color={"teal"}
                   colorScheme={"teal"}
@@ -73,6 +76,7 @@ function TopNav() {
               </a>
               <Link href={"/contact"}>
                 <Button
+                  id="top-contact"
                   variant={
                     router.pathname.includes("/contact") ? "solid" : "unstyled"
                   }
@@ -89,6 +93,7 @@ function TopNav() {
                   variant={"outline"}
                   color={"teal"}
                   colorScheme={"teal"}
+                  id="top-cart"
                 >
                   ${cart.subtotal?.toFixed(2)}
                 </Button>
@@ -99,6 +104,7 @@ function TopNav() {
                   variant={"unstyled"}
                   color={"teal"}
                   colorScheme={"teal"}
+                  id="top-sign-out"
                 >
                   Sign Out
                 </Button>
@@ -125,17 +131,38 @@ function TopNav() {
               <VStack spacing={5} align="self-start" justifyContent="start">
                 <Link href={"/products"}>
                   <Button
+                    id="drawer-"
                     variant={router.pathname === "/" ? "solid" : "unstyled"}
                     color={router.pathname === "/" ? "white" : "teal"}
                     colorScheme={"teal"}
                     w={"full"}
                   >
-                    Products
+                    Home
                   </Button>
                 </Link>
                 <Divider />
+                <Box w={"100%"}>
+                  <a
+                    href={"https://qualityworkscg.com/automation-bootcamp/"}
+                    rel="noopener noreferrer"
+                    target={"_blank"}
+                  >
+                    <Button
+                      id="drawer-about"
+                      variant={"unstyled"}
+                      w={"100%"}
+                      color={"teal"}
+                      colorScheme={"teal"}
+                    >
+                      About
+                    </Button>
+                  </a>
+                </Box>
+
+                <Divider />
                 <Link href={"/contact"}>
                   <Button
+                    id="drawer-contact"
                     variant={
                       router.pathname.includes("/contact")
                         ? "solid"
@@ -157,6 +184,7 @@ function TopNav() {
                     color={"teal"}
                     colorScheme={"teal"}
                     w={"full"}
+                    id="drawer-cart"
                   >
                     ${cart.subtotal?.toFixed(2)}
                   </Button>
@@ -169,6 +197,7 @@ function TopNav() {
                     color={"teal"}
                     colorScheme={"teal"}
                     w={"full"}
+                    id="drawer-sign-out"
                   >
                     Sign Out
                   </Button>

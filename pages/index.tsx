@@ -11,6 +11,7 @@ import type { NextPage } from "next";
 import { useUser } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Link from "next/link";
 const Home: NextPage = () => {
   const { user, isLoading } = useUser();
   const router = useRouter();
@@ -28,17 +29,21 @@ const Home: NextPage = () => {
         <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
           <Flex p={8} flex={1} align={"center"} justify={"center"}>
             <Stack spacing={4} w={"full"} maxW={"md"}>
-              <Heading textAlign={"center"}>
+              <Heading id={"login-text"} textAlign={"center"}>
                 Welcome to the Automation Camp Store
               </Heading>
 
               <Stack spacing={6}>
                 <Center>
-                  <LinkOverlay href="/api/auth/login">
-                    <Button colorScheme={"teal"} variant={"solid"}>
+                  <Link href="/api/auth/login">
+                    <Button
+                      id={"signInOrRegister"}
+                      colorScheme={"teal"}
+                      variant={"solid"}
+                    >
                       Sign In Or Register
                     </Button>
-                  </LinkOverlay>
+                  </Link>
                 </Center>
               </Stack>
             </Stack>

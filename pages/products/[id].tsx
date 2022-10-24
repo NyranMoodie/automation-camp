@@ -50,6 +50,7 @@ const SelectedProduct: PageWithLayout = ({ product }: any) => {
 
             <Box>
               <Button
+                id={"add-to-cart"}
                 className="snipcart-add-item"
                 data-item-id={product?.id}
                 data-item-price={product?.price}

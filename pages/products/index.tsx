@@ -49,15 +49,17 @@ const Home: PageWithLayout = () => {
             <FormControl>
               <FormLabel>Search</FormLabel>
               <Input
+                id={"search"}
                 onChange={(e: any) => {
                   setSearchValue(e.target.value);
                 }}
-                placeholder="Enter item name"
+                placeholder="Search by name"
               />
             </FormControl>
             <FormControl>
               <FormLabel>Category</FormLabel>
               <Select
+                id={"category"}
                 onChange={(e) => {
                   setSearchValue(e.target.value);
                 }}
@@ -113,6 +115,7 @@ const Home: PageWithLayout = () => {
                     </Stack>
 
                     <Button
+                      id={"add-to-cart"}
                       className="snipcart-add-item"
                       data-item-id={product?.id}
                       data-item-price={product?.price}
