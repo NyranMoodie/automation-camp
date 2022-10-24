@@ -47,11 +47,11 @@ export default function Hero() {
             </Text>
             <br />
             <Text as={"span"} color={"teal.400"}>
-              Quality Swag!
+              Quality Items!
             </Text>
           </Heading>
           <Text color={"gray.500"}>
-            Shop QualitySwag range of womens and mens clothing for the latest
+            Shop for wide range of womens and mens clothing for the latest
             fashion trends you can totally do your thing in, with 100s of new
             styles landing every day! All that is free!
           </Text>

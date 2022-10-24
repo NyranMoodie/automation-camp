@@ -4,6 +4,7 @@ export const products = [
     name: "Quality Fitted Hat",
     price: 30,
     description: "",
+    category: "hat",
     image: "/images/quality-hat-model.jpg",
   },
   {
@@ -11,6 +12,7 @@ export const products = [
     name: "Quality Trucker Hat",
     price: 24,
     description: "",
+    category: "hat",
     image: "/images/quality-hat.jpg",
   },
   {
@@ -18,6 +20,7 @@ export const products = [
     name: "Quality Mousepad",
     price: 20,
     description: "",
+    category: "computer",
     image: "/images/quality-mousepad.jpg",
   },
   {
@@ -25,6 +28,7 @@ export const products = [
     name: "Quality Mug",
     price: 15,
     description: "",
+    category: "cup",
     image: "/images/quality-mug.jpg",
   },
   {
@@ -32,6 +36,7 @@ export const products = [
     name: "Quality Pillow",
     price: 20,
     description: "",
+    category: "pillow",
     image: "/images/quality-pillow.jpg",
   },
   {
@@ -39,6 +44,7 @@ export const products = [
     name: "Quality Hooded Sweatshirt",
     price: 50,
     description: "",
+    category: "shirt",
     image: "/images/quality-sweatshirt-hooded.jpg",
   },
   {
@@ -46,6 +52,7 @@ export const products = [
     name: "Quality Sweatshirt",
     price: 40,
     description: "",
+    category: "shirt",
     image: "/images/quality-sweatshirt.jpg",
   },
   {
@@ -53,6 +60,7 @@ export const products = [
     name: "Quality Kids Tshirt",
     price: 15,
     description: "",
+    category: "shirt",
     image: "/images/quality-tshirt-kids.jpg",
   },
   {
@@ -60,6 +68,7 @@ export const products = [
     name: "Quality Tshirt",
     price: 20,
     description: "",
+    category: "shirt",
     image: "/images/quality-tshirt-model.jpg",
   },
   {
@@ -67,6 +76,61 @@ export const products = [
     name: "Quality Vneck",
     price: 20,
     description: "",
+    category: "shirt  ",
     image: "/images/quality-tshirt-vneck.jpg",
+  },
+  {
+    id: "quality-pants-1",
+    name: "Quality Pink Pants",
+    price: 44,
+    description: "",
+    category: "pants",
+    image:
+      "https://images.pexels.com/photos/7680206/pexels-photo-7680206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "quality-pants-2",
+    name: "Quality Cargo Pants",
+    price: 17,
+    description: "",
+    category: "pants",
+    image:
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+  },
+  {
+    id: "quality-pants-3",
+    name: "Quality Jeans Pants",
+    price: 28,
+    description: "",
+    category: "pants",
+    image:
+      "https://images.pexels.com/photos/2343661/pexels-photo-2343661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "quality-shoes-1",
+    name: "Quality Blue Shoes",
+    price: 20,
+    description: "",
+    category: "shoes",
+    image:
+      "https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "quality-shoes-2",
+    name: "Quality Stylish Shoes",
+    price: 20,
+    description: "",
+    category: "shoes",
+    image:
+      "https://images.pexels.com/photos/8582992/pexels-photo-8582992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "quality-shoes-3",
+    name: "Quality Heal Shoes",
+    price: 20,
+    description: "",
+    category: "shoes",
+    image:
+      "https://images.pexels.com/photos/3782786/pexels-photo-3782786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];

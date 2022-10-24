@@ -10,6 +10,7 @@ import {
 import type { NextPage } from "next";
 import { useUser } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
+import Head from "next/head";
 const Home: NextPage = () => {
   const { user, isLoading } = useUser();
   const router = useRouter();
@@ -18,6 +19,11 @@ const Home: NextPage = () => {
   }
   return (
     <>
+      <Head>
+        <title>Automation Camp Store | Login</title>
+        <meta name="description" content="Store" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {!isLoading && !user && (
         <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
           <Flex p={8} flex={1} align={"center"} justify={"center"}>

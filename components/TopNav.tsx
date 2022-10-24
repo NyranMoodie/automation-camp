@@ -5,6 +5,7 @@ import {
   Heading,
   HStack,
   IconButton,
+  Image,
   LinkOverlay,
   Stack,
   Text,
@@ -35,9 +36,10 @@ function TopNav() {
         <HStack justifyContent="space-between">
           <Box>
             <HStack>
-              <LinkOverlay href={"/"}>
+              <Image src="/favicon.ico"></Image>
+              <a href={"/"}>
                 <Heading color={"teal"}>Automation Camp Store</Heading>
-              </LinkOverlay>
+              </a>
             </HStack>
           </Box>
           <Box>
@@ -56,7 +58,7 @@ function TopNav() {
                   Home
                 </Button>
               </Link>
-              <Link
+              <a
                 href={"https://qualityworkscg.com/automation-bootcamp/"}
                 target={"_blank"}
               >
@@ -67,7 +69,7 @@ function TopNav() {
                 >
                   About
                 </Button>
-              </Link>
+              </a>
               <Link href={"/contact"}>
                 <Button
                   variant={
