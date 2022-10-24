@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           <Flex p={8} flex={1} align={"center"} justify={"center"}>
             <Stack spacing={4} w={"full"} maxW={"md"}>
               <Heading textAlign={"center"}>
-                Welcome to the Automation Camp App
+                Welcome to the Automation Camp Store
               </Heading>
 
               <Stack spacing={6}>
