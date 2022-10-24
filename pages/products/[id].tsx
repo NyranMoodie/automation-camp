@@ -8,6 +8,7 @@ import {
   SimpleGrid,
   Skeleton,
   Stack,
+  Tag,
   Text,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
@@ -26,6 +27,7 @@ const SelectedProduct: PageWithLayout = ({ product }: any) => {
           onClick={() => {
             history.back();
           }}
+          _hover={{ cursor: "pointer" }}
         >
           <BiArrowBack fontSize={30} />
           <Heading size={"md"}>Back to products</Heading>
@@ -40,6 +42,12 @@ const SelectedProduct: PageWithLayout = ({ product }: any) => {
           <Stack spacing={4}>
             <Heading>{product?.name}</Heading>
             <Text>${product?.price}</Text>
+            <Box>
+              <Tag variant={"outline"} colorScheme={"teal"}>
+                {product?.category}
+              </Tag>
+            </Box>
+
             <Box>
               <Button
                 className="snipcart-add-item"

@@ -60,6 +60,7 @@ function TopNav() {
               </Link>
               <a
                 href={"https://qualityworkscg.com/automation-bootcamp/"}
+                rel="noopener noreferrer"
                 target={"_blank"}
               >
                 <Button
