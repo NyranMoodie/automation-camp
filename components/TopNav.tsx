@@ -1,14 +1,11 @@
 import {
   Box,
   Button,
-  Center,
   Divider,
   Heading,
   HStack,
   IconButton,
   Image,
-  LinkOverlay,
-  Stack,
   Text,
   useDisclosure,
   VStack,
@@ -23,14 +20,17 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineLogin, AiOutlineShoppingCart } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
 import { useSnipcart } from "use-snipcart";
+import { useFavorites } from "../context/FavorateContext";
 function TopNav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
   const { cart = {} } = useSnipcart();
+
+  const { favorites } = useFavorites();
   return (
     <Box>
       <Box p={3} px={["", 24]} w="100%" shadow="base" bg={"white"}>
@@ -58,6 +58,18 @@ function TopNav() {
                   colorScheme={"teal"}
                 >
                   Home
+                </Button>
+              </Link>
+              <Link href={"/favorites"}>
+                <Button
+                  id="top-favorite"
+                  variant={
+                    router.pathname === "/favorites" ? "solid" : "unstyled"
+                  }
+                  color={router.pathname === "/favorites" ? "white" : "teal"}
+                  colorScheme={"teal"}
+                >
+                  <Text>Favorites [{favorites.length}]</Text>
                 </Button>
               </Link>
               <a
@@ -140,6 +152,25 @@ function TopNav() {
                     Home
                   </Button>
                 </Link>
+                <Divider />
+                <Box w={"full"}>
+                  <Link href={"/favorites"}>
+                    <Button
+                      w={"full"}
+                      id="drawer-favorite"
+                      variant={
+                        router.pathname === "/favorites" ? "solid" : "unstyled"
+                      }
+                      color={
+                        router.pathname === "/favorites" ? "white" : "teal"
+                      }
+                      colorScheme={"teal"}
+                    >
+                      <Text>Favorites [{favorites.length}]</Text>
+                    </Button>
+                  </Link>
+                </Box>
+
                 <Divider />
                 <Box w={"100%"}>
                   <a

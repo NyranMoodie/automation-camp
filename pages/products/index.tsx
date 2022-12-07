@@ -20,26 +20,34 @@ import {
   NumberInput,
   NumberInputField,
   NumberInputStepper,
+  Tooltip,
+  useToast,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { products } from "../../data/products";
 import Hero from "../../components/Hero";
 import Link from "next/link";
 import {
-  AiOutlineClear,
+  AiFillStar,
   AiOutlineClose,
   AiOutlineShoppingCart,
+  AiOutlineStar,
 } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { PageWithLayout } from "../../modules/Layout";
 import { Product } from "../../modules/product";
+import { useFavorites } from "../../context/FavorateContext";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+
 const Home: PageWithLayout = () => {
   const [categorySearch, setCategorySearch] = useState("");
   const [sortFilter, setSortFilter] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [count, setCount] = useState({ id: "", quantity: 1 });
   const [filteredList, setFiltered] = useState<Product[]>(products);
+  const { favorites, addToFavorites, removeFromFavorites } = useFavorites();
+  const toast = useToast();
 
   useEffect(() => {
     setFiltered(
@@ -173,9 +181,49 @@ const Home: PageWithLayout = () => {
 
                   <Stack>
                     <Stack spacing="1">
-                      <Text fontWeight="medium" color={"gray.400"}>
-                        {product.name}
-                      </Text>
+                      <HStack justifyContent={"space-between"}>
+                        <Text fontWeight="medium" color={"gray.400"}>
+                          {product.name}
+                        </Text>
+
+                        {favorites?.find((id: any) => id === product.id) ? (
+                          <Box _hover={{ cursor: "pointer" }}>
+                            <AiFillStar
+                              color="#F1C40F"
+                              id={"remove-from-favorite"}
+                              onClick={() => {
+                                removeFromFavorites(product.id);
+                                toast({
+                                  title: `${product.name} removed from favorites`,
+                                  variant: "subtle",
+                                  status: "error",
+                                  position: "top-right",
+                                  duration: 2000,
+                                  isClosable: true,
+                                });
+                              }}
+                            />
+                          </Box>
+                        ) : (
+                          <Box _hover={{ cursor: "pointer" }}>
+                            <AiOutlineStar
+                              id={"add-to-favorite"}
+                              onClick={() => {
+                                addToFavorites(product.id);
+                                toast({
+                                  title: `${product.name} added to favorites`,
+                                  variant: "subtle",
+                                  status: "success",
+                                  position: "top-right",
+                                  duration: 2000,
+                                  isClosable: true,
+                                });
+                              }}
+                            />
+                          </Box>
+                        )}
+                      </HStack>
+
                       <NumberInput
                         w={"70px"}
                         defaultValue={1}
@@ -233,3 +281,5 @@ Home.getLayout = function getLayout(page) {
 };
 
 export default Home;
+
+export const getServerSideProps = withPageAuthRequired();

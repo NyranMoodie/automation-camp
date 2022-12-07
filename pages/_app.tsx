@@ -4,6 +4,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { SnipcartProvider } from "use-snipcart";
 import { UserProvider } from "@auth0/nextjs-auth0";
 import { PageWithLayout } from "../modules/Layout";
+import FavoritesProvider from "../context/FavorateContext";
 type AppPropsWithLayout = AppProps & {
   Component: PageWithLayout;
 };
@@ -12,13 +13,15 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
-    <UserProvider>
-      <ChakraProvider>
-        <SnipcartProvider>
-          {getLayout(<Component {...pageProps} />)}
-        </SnipcartProvider>
-      </ChakraProvider>
-    </UserProvider>
+    <FavoritesProvider>
+      <UserProvider>
+        <ChakraProvider>
+          <SnipcartProvider>
+            {getLayout(<Component {...pageProps} />)}
+          </SnipcartProvider>
+        </ChakraProvider>
+      </UserProvider>
+    </FavoritesProvider>
   );
 }
 

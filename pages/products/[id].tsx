@@ -27,6 +27,7 @@ import { PageWithLayout } from "../../modules/Layout";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 const SelectedProduct: PageWithLayout = ({ product }: any) => {
   const [count, setCount] = useState({ id: "", quantity: 1 });
   return (
@@ -176,3 +177,5 @@ SelectedProduct.getLayout = function getLayout(page) {
 };
 
 export default SelectedProduct;
+
+export const getServerSideProps = withPageAuthRequired();

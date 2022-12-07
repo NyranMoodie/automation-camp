@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
-import { useUser } from "@auth0/nextjs-auth0";
+import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
