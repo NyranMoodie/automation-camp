@@ -178,4 +178,4 @@ SelectedProduct.getLayout = function getLayout(page) {
 
 export default SelectedProduct;
 
-export const getServerSideProps = withPageAuthRequired();
+// export const getServerSideProps = withPageAuthRequired();
