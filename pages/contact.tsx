@@ -61,7 +61,7 @@ const Contact: PageWithLayout = () => {
             title: "Message Sent!",
             description: "Your message has been sent!",
             status: "success",
-            duration: 5000,
+            duration: 10000,
             isClosable: true,
           });
           reset();

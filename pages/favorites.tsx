@@ -100,7 +100,7 @@ const Favorites: PageWithLayout = () => {
                                 variant: "subtle",
                                 status: "error",
                                 position: "top-right",
-                                duration: 2000,
+                                duration: 10000,
                                 isClosable: true,
                               });
                             }}

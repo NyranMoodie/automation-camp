@@ -186,7 +186,7 @@ const Home: PageWithLayout = () => {
                           {product.name}
                         </Text>
 
-                        {favorites?.find((id: any) => id === product.id) ? (
+                        {/* {favorites?.find((id: any) => id === product.id) ? (
                           <Box _hover={{ cursor: "pointer" }}>
                             <AiFillStar
                               color="#F1C40F"
@@ -198,7 +198,7 @@ const Home: PageWithLayout = () => {
                                   variant: "subtle",
                                   status: "error",
                                   position: "top-right",
-                                  duration: 2000,
+                                  duration: 10000,
                                   isClosable: true,
                                 });
                               }}
@@ -215,13 +215,13 @@ const Home: PageWithLayout = () => {
                                   variant: "subtle",
                                   status: "success",
                                   position: "top-right",
-                                  duration: 2000,
+                                  duration: 10000,
                                   isClosable: true,
                                 });
                               }}
                             />
                           </Box>
-                        )}
+                        )} */}
                       </HStack>
 
                       <NumberInput
