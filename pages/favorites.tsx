@@ -25,17 +25,10 @@ import {
   useToast,
   Container,
   Heading,
-  Center,
   VStack,
 } from "@chakra-ui/react";
-import { count } from "console";
 import Link from "next/link";
-import {
-  AiFillStar,
-  AiOutlineStar,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Favorites: PageWithLayout = () => {
   const { favorites, removeFromFavorites } = useFavorites();
@@ -173,5 +166,3 @@ Favorites.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
 export default Favorites;
-
-export const getServerSideProps = withPageAuthRequired();

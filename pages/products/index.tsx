@@ -38,7 +38,6 @@ import Layout from "../../components/Layout";
 import { PageWithLayout } from "../../modules/Layout";
 import { Product } from "../../modules/product";
 import { useFavorites } from "../../context/FavorateContext";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 const Home: PageWithLayout = () => {
   const [categorySearch, setCategorySearch] = useState("");
@@ -285,5 +284,3 @@ Home.getLayout = function getLayout(page) {
 };
 
 export default Home;
-
-export const getServerSideProps = withPageAuthRequired();

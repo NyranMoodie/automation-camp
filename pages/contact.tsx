@@ -28,11 +28,9 @@ import {
 } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
 import { FormControl, FormLabel, FormErrorMessage } from "@chakra-ui/react";
-import { IoSchoolOutline } from "react-icons/io5";
 import axios from "axios";
 import Layout from "../components/Layout";
 import { PageWithLayout } from "../modules/Layout";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 type FormData = {
   firstName: string;
@@ -272,5 +270,3 @@ Contact.getLayout = function getLayout(page) {
 };
 
 export default Contact;
-
-export const getServerSideProps = withPageAuthRequired();
