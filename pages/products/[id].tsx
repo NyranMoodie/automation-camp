@@ -64,7 +64,7 @@ const SelectedProduct: PageWithLayout = ({ product }: any) => {
           <Stack spacing={4}>
             <HStack>
               <Heading>{product?.name} </Heading>
-              {favorites?.find((id: any) => id === product.id) ? (
+              {/* {favorites?.find((id: any) => id === product.id) ? (
                 <Box _hover={{ cursor: "pointer" }}>
                   <AiFillStar
                     color="#F1C40F"
@@ -101,7 +101,7 @@ const SelectedProduct: PageWithLayout = ({ product }: any) => {
                     }}
                   />
                 </Box>
-              )}
+              )} */}
             </HStack>
 
             <Text>{product?.description}</Text>
