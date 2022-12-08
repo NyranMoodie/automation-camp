@@ -16,10 +16,15 @@ import {
   Stack,
   Tag,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 
 import React, { useState } from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import {
+  AiFillStar,
+  AiOutlineShoppingCart,
+  AiOutlineStar,
+} from "react-icons/ai";
 import { BiArrowBack } from "react-icons/bi";
 import Layout from "../../components/Layout";
 import { products } from "../../data/products";
@@ -27,9 +32,12 @@ import { PageWithLayout } from "../../modules/Layout";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Link from "next/link";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import { useFavorites } from "../../context/FavorateContext";
+
 const SelectedProduct: PageWithLayout = ({ product }: any) => {
   const [count, setCount] = useState({ id: "", quantity: 1 });
+  const { favorites, addToFavorites, removeFromFavorites } = useFavorites();
+  const toast = useToast();
   return (
     <Container maxW={"7xl"}>
       <Stack py={6} spacing={4} direction={"column"}>
@@ -54,13 +62,55 @@ const SelectedProduct: PageWithLayout = ({ product }: any) => {
             </div>
           </Carousel>
           <Stack spacing={4}>
-            <Heading>{product?.name}</Heading>
+            <HStack>
+              <Heading>{product?.name} </Heading>
+              {favorites?.find((id: any) => id === product.id) ? (
+                <Box _hover={{ cursor: "pointer" }}>
+                  <AiFillStar
+                    color="#F1C40F"
+                    id={"remove-from-favorite"}
+                    fontSize={30}
+                    onClick={() => {
+                      removeFromFavorites(product.id);
+                      toast({
+                        title: `${product.name} removed from favorites`,
+                        variant: "subtle",
+                        status: "error",
+                        position: "top-right",
+                        duration: 10000,
+                        isClosable: true,
+                      });
+                    }}
+                  />
+                </Box>
+              ) : (
+                <Box _hover={{ cursor: "pointer" }}>
+                  <AiOutlineStar
+                    fontSize={30}
+                    id={"add-to-favorite"}
+                    onClick={() => {
+                      addToFavorites(product.id);
+                      toast({
+                        title: `${product.name} added to favorites`,
+                        variant: "subtle",
+                        status: "success",
+                        position: "top-right",
+                        duration: 10000,
+                        isClosable: true,
+                      });
+                    }}
+                  />
+                </Box>
+              )}
+            </HStack>
+
             <Text>{product?.description}</Text>
 
             <HStack>
               <Text>Price : </Text>
               <Text>${product?.price}</Text>
             </HStack>
+
             <NumberInput
               w={"70px"}
               defaultValue={1}
@@ -73,8 +123,8 @@ const SelectedProduct: PageWithLayout = ({ product }: any) => {
             >
               <NumberInputField />
               <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
+                <NumberIncrementStepper id={`product-increase`} />
+                <NumberDecrementStepper id={`product-decrease`} />
               </NumberInputStepper>
             </NumberInput>
             <HStack>

@@ -156,7 +156,7 @@ const Home: PageWithLayout = () => {
           <SimpleGrid columns={[1, 2, 3, 4]} spacing={6} pb={6}>
             {filteredList?.map((product, index) => {
               return (
-                <Stack key={index} borderRadius={"lg"}>
+                <Stack id={`product-${index}`} key={index} borderRadius={"lg"}>
                   <Link href={`/products/${product.id}`}>
                     <Box position="relative" _hover={{ cursor: "pointer" }}>
                       <AspectRatio ratio={4 / 3}>
@@ -236,8 +236,12 @@ const Home: PageWithLayout = () => {
                       >
                         <NumberInputField />
                         <NumberInputStepper>
-                          <NumberIncrementStepper />
-                          <NumberDecrementStepper />
+                          <NumberIncrementStepper
+                            id={`product-${index}-increase`}
+                          />
+                          <NumberDecrementStepper
+                            id={`product-${index}-decrease`}
+                          />
                         </NumberInputStepper>
                       </NumberInput>
                       <HStack pt={"1"}>
