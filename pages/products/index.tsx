@@ -38,6 +38,8 @@ import Layout from "../../components/Layout";
 import { PageWithLayout } from "../../modules/Layout";
 import { Product } from "../../modules/product";
 import { useFavorites } from "../../context/FavorateContext";
+import { GetStaticProps } from "next";
+import Footer from "../../components/Footer";
 
 const Home: PageWithLayout = () => {
   const [categorySearch, setCategorySearch] = useState("");
@@ -258,7 +260,7 @@ const Home: PageWithLayout = () => {
                     data-item-id={product?.id}
                     data-item-price={product?.price}
                     data-item-description={product?.description}
-                    data-item-url={`/products/${product?.id}`}
+                    data-item-url={`/api/products/${product?.id}`}
                     data-item-image={product?.image}
                     data-item-name={product?.name}
                     data-item-quantity={
@@ -284,3 +286,11 @@ Home.getLayout = function getLayout(page) {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      products,
+    },
+  };
+};

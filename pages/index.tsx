@@ -7,11 +7,12 @@ import {
   LinkOverlay,
   Stack,
 } from "@chakra-ui/react";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { useUser } from "@auth0/nextjs-auth0";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
+import { products } from "../data/products";
 const Home: NextPage = () => {
   const { user, isLoading } = useUser();
   const router = useRouter();
@@ -64,3 +65,11 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      products,
+    },
+  };
+};
