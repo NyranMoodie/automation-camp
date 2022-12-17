@@ -60,7 +60,7 @@ function TopNav() {
                   Home
                 </Button>
               </Link>
-              {/* <Link href={"/favorites"}>
+              <Link href={"/favorites"}>
                 <Button
                   id="top-favorite"
                   variant={
@@ -71,7 +71,7 @@ function TopNav() {
                 >
                   <Text>Favorites [{favorites.length}]</Text>
                 </Button>
-              </Link> */}
+              </Link>
               <a
                 href={"https://qualityworkscg.com/automation-bootcamp/"}
                 rel="noopener noreferrer"
@@ -152,7 +152,7 @@ function TopNav() {
                     Home
                   </Button>
                 </Link>
-                {/* <Divider />
+                <Divider />
                 <Box w={"full"}>
                   <Link href={"/favorites"}>
                     <Button
@@ -169,7 +169,7 @@ function TopNav() {
                       <Text>Favorites [{favorites.length}]</Text>
                     </Button>
                   </Link>
-                </Box> */}
+                </Box>
 
                 <Divider />
                 <Box w={"100%"}>

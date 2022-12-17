@@ -39,7 +39,6 @@ import { PageWithLayout } from "../../modules/Layout";
 import { Product } from "../../modules/product";
 import { useFavorites } from "../../context/FavorateContext";
 import { GetStaticProps } from "next";
-import Footer from "../../components/Footer";
 
 const Home: PageWithLayout = () => {
   const [categorySearch, setCategorySearch] = useState("");
@@ -187,7 +186,7 @@ const Home: PageWithLayout = () => {
                           {product.name}
                         </Text>
 
-                        {/* {favorites?.find((id: any) => id === product.id) ? (
+                        {favorites?.find((id: any) => id === product.id) ? (
                           <Box _hover={{ cursor: "pointer" }}>
                             <AiFillStar
                               color="#F1C40F"
@@ -222,7 +221,7 @@ const Home: PageWithLayout = () => {
                               }}
                             />
                           </Box>
-                        )} */}
+                        )}
                       </HStack>
 
                       <NumberInput
